@@ -57,6 +57,10 @@ ul {
 /* Header Start */
 
 header {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 2;
 }
 
 header .container {
@@ -64,6 +68,7 @@ header .container {
     justify-content: space-between;
     align-items: center;
     position: relative;
+    min-height: 97px;
 }
 
 header .container::after {
@@ -87,8 +92,39 @@ header .container nav {
     align-items: center;
 }
 
+header .container nav .toggle-menu {
+    color: white;
+    font-size: 22px;
+}
+
+@media (min-width: 768px) {
+    header .container nav .toggle-menu {
+        display: none;
+    }
+}
+
+header .container nav .toggle-menu:hover + ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgb(0 0 0 / 50%);
+}
+
+header .container nav .toggle-menu:hover + ul a {
+    padding: 15px;
+}
+
 header .container nav ul {
     display: flex;
+}
+
+@media (max-width: 767px) {
+    header .container nav ul {
+        display: none;
+    }
 }
 
 header .container nav ul a {
