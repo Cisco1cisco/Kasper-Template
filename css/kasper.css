@@ -206,8 +206,20 @@ header .container .form i {
     justify-content: flex-end;
 }
 
+@media (max-width: 767px) {
+    .landing .text {
+        width: 100%;
+    }
+}
+
 .landing .text .content {
     max-width: 500px;
+}
+
+@media (max-width: 767px) {
+    .landing .text .content {
+        max-width: 100%;
+    } 
 }
 
 .landing .text .content h2 {
@@ -220,6 +232,60 @@ header .container .form i {
 .landing .text .content p {
     line-height: 2;
     font-size: 14px;
+}
+
+.landing .change-background {
+    color:#ddd;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+@media (max-width: 767px) {
+    .landing .change-background {
+        display: none;
+    }
+}
+
+.landing .fas.fa-angle-left { 
+    left: 30px;   
+}
+
+.landing .fas.fa-angle-right {    
+    right: 30px;
+}
+
+.landing .bulletts {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    display: flex;
+}
+
+.landing .bulletts li {
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-right: 10px;
+}
+
+.landing .bulletts li.active {
+    background-color: var(--main-color , #19c8fa);
+    border-color: var(--main-color , #19c8fa);
 }
 
 /* Landing End */
